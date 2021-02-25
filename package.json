@@ -4,7 +4,9 @@
   "description": "servidor node de notas para utilizar como api en clientes javascript",
   "main": "index.ts",
   "scripts": {
-    "dev": "nodemon src/index"
+    "dev": "nodemon src/index",
+    "start": "node dist/index",
+    "build" : "tsc"
   },
   "keywords": [],
   "author": "",
