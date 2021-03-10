@@ -1,0 +1,12 @@
+{
+  "openapi": "1.0.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "notes api",
+    "description": "api para creacion de notas",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  }
+}
