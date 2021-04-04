@@ -1,6 +1,7 @@
 import App from "./App";
 import "reflect-metadata";
 import { Connection, createConnection } from "typeorm";
+import driver from 'mssql/msnodesqlv8'
 
 async function init() {
 
@@ -14,7 +15,6 @@ async function init() {
             type: "mssql",
             logging: true,
             synchronize: true,
-            options: { enableArithAbort: true },
             pool: {
                 max: 10,
                 min: 0,
