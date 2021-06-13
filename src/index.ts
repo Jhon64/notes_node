@@ -1,31 +1,15 @@
 import App from "./App";
 import "reflect-metadata";
-import { Connection, createConnection } from "typeorm";
+import { Connection } from "typeorm";
 import driver from 'mssql/msnodesqlv8'
-
+import configDatabase  from "./configDatabase";
 async function init() {
 
     try {
-        const connection: Connection = await createConnection({
-            name: "default",
-            host: "localhost",
-            username: "sa",
-            password: "123",
-            database: "notesDB",
-            type: "mssql",
-            logging: true,
-            synchronize: true,
-            pool: {
-                max: 10,
-                min: 0,
-                idleTimeoutMillis: 30000
-            },
-            entities: ["src/entity/**/*.ts"]
-
-        });
+        const connection: Connection = await configDatabase;
         new App().listenToServer()
     } catch (e) {
-        console.log({ e, message: "no se pudo conectar a la base de datos" })
+        console.log({ e, message: "error en la base de datos" })
     }
 
 }

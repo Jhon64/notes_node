@@ -32,7 +32,7 @@ export default class App {
     }
     listenToServer() {
         this.aplicacion.listen(this.aplicacion.get("PORT"), () => {
-            console.log(`levantando servidor en http://localhost:${this.aplicacion.get("PORT")}`)
+            console.log(`levantando servidor en http://192.168.0.109:${this.aplicacion.get("PORT")}`)
         })
     }
 }

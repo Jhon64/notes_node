@@ -1,5 +1,6 @@
 {
-  "openapi": "1.0.0",
+  "swagger": "2.0",
+  "openApi": "3.0",
   "info": {
     "version": "1.0.0",
     "title": "notes api",
